@@ -39,6 +39,9 @@
 
 ;; set font family
 (set-frame-font "Monaco 12")
+;; 如果是GUI版本, 则设置中文字体, 如果不做判断terminal中的emacs会报错
+(if window-system
+    (set-fontset-font "fontset-default" 'han '("STHeiti")))
 
 ;;;
 (require 'better-defaults)
@@ -78,6 +81,9 @@
 (require 'auto-complete)
 (require 'auto-complete-config)
 (ac-config-default)
+(setq ac-use-menu-map t)
+(define-key ac-menu-map "\C-n" 'ac-next)
+(define-key ac-menu-map "\C-p" 'ac-previous)
 
 ;;;
 (require 'fill-column-indicator)
@@ -85,19 +91,14 @@
 
 ;; ====================================
 ;; install by packages archives
-;; 因为所有elpa安装的package都准备做成可选项, 所以配置每一个包时候都要检测一下是否安装
-(when (require 'flycheck-mode nil t)
-  (global-flycheck-mode)
-
-  (setq-default flycheck-temp-prefix ".")
-  (setq-default flycheck-disabled-checkers
-                (append flycheck-disabled-checkers
-                        '(javascript-jshint)))
-  (setq flycheck-checkers '(javascript-eslint))
-  (setq-default flycheck-disabled-checkers
-                (append flycheck-disabled-checkers
-                        '(json-jsonlint)))
-  (setq flycheck-eslintrc "~/.eslintrc"))
+(global-flycheck-mode)
+(setq-default flycheck-temp-prefix ".")
+(setq flycheck-disable-checker '(javascript-jshint))
+(setq flycheck-checkers '(javascript-eslint
+                          python-pylint
+                          json-jsonlint))
+(setq flycheck-eslintrc "~/.eslintrc")
+(setq flycheck-pylintrc "~/.pylintrc")
 
 ;; ====================================
 ;; 暂时的设置

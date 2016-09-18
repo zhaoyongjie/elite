@@ -21,6 +21,7 @@
                            dockerfile-mode
                            markdown-mode
                            flycheck
+                           vue-mode
                            )
   "A list of packages to ensure are installed at launch.")
 (dolist (p install-packages)
