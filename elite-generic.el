@@ -1,3 +1,8 @@
+;; 设置系统env path
+(require 'exec-path-from-shell)
+(when (memq window-system '(mac ns))
+  (exec-path-from-shell-initialize))
+
 ;; general things
 (custom-set-variables
  '(inhibit-startup-screen t)
@@ -74,9 +79,25 @@
 (require 'auto-complete-config)
 (ac-config-default)
 
+;;;
+(require 'fill-column-indicator)
+(setq fci-rule-column 80)
+
 ;; ====================================
 ;; install by packages archives
-(global-flycheck-mode)
+;; 因为所有elpa安装的package都准备做成可选项, 所以配置每一个包时候都要检测一下是否安装
+(when (require 'flycheck-mode nil t)
+  (global-flycheck-mode)
+
+  (setq-default flycheck-temp-prefix ".")
+  (setq-default flycheck-disabled-checkers
+                (append flycheck-disabled-checkers
+                        '(javascript-jshint)))
+  (setq flycheck-checkers '(javascript-eslint))
+  (setq-default flycheck-disabled-checkers
+                (append flycheck-disabled-checkers
+                        '(json-jsonlint)))
+  (setq flycheck-eslintrc "~/.eslintrc"))
 
 ;; ====================================
 ;; 暂时的设置

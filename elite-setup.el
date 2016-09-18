@@ -16,7 +16,10 @@
 (defvar install-packages '(js2-mode
                            web-mode
                            json-mode
+                           scss-mode
                            nginx-mode
+                           dockerfile-mode
+                           markdown-mode
                            flycheck
                            )
   "A list of packages to ensure are installed at launch.")

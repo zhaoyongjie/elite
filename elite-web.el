@@ -11,8 +11,8 @@
   (setq web-mode-style-padding 0)
   (setq web-mode-script-padding 0)
   (setq web-mode-block-padding 0)
-  (when (require 'auto-complete nil t)
-    (auto-complete-mode t))
+  (when (require 'fill-column-indicator nil t)
+    (fci-mode t))
 )
 (add-hook 'web-mode-hook 'custom-web-mode-hook)
 
@@ -22,8 +22,11 @@
 
 (defun custom-js2-mode-hook ()
   (setq js2-basic-offset 2)
-  (setq js2-global-externs '("$" "window" "angular"))
-  ;; (flycheck-mode -1) ;; 关闭flycheck-mode
+  (flycheck-mode t)
+  (when (executable-find "eslint")
+    (flycheck-select-checker 'javascript-eslint))
+  (when (require 'fill-column-indicator nil t)
+    (fci-mode t))
 )
 (add-hook 'js2-mode-hook 'custom-js2-mode-hook)
 
