@@ -12,6 +12,6 @@ Installation & Usage
    git clone --recursive git@github.com:zhaoyongjie/elite.git
 
 ``~/.emacs.d/init.el``, 如果需要加载工作路径, 设置常量 ``workspace-dir``
-.. code-block::
+.. code-block:: elisp
    (defconst workspace-dir "~/workspace")
    (load-file "~/.emacs.d/elite/elite-init.el")
