@@ -86,6 +86,16 @@
 (define-key ac-menu-map "\C-p" 'ac-previous)
 
 ;;;
+(require 'yasnippet)
+(yas-global-mode t)
+
+;; https://github.com/joaotavora/yasnippet/issues/526
+;; 修正 auto complete和yas tab冲突
+(defadvice ac-fallback-command (around no-yasnippet-fallback activate)
+  (let ((yas-fallback-behavior nil))
+    ad-do-it))
+
+;;;
 (require 'fill-column-indicator)
 (setq fci-rule-column 80)
 
