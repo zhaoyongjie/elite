@@ -10,8 +10,6 @@
   (setq web-mode-style-padding 0)
   (setq web-mode-script-padding 0)
   (setq web-mode-block-padding 0)
-  ;; (when (executable-find "eslint")
-  ;;   (flycheck-select-checker 'javascript-eslint))
   (when (require 'fill-column-indicator nil t)
     (fci-mode t))
 )
@@ -19,13 +17,12 @@
 
 ;; setting vue-mode, vue-mode is mmm-mode's fork
 ;; https://github.com/CodeFalling/vue-mode
-;; (add-to-list 'auto-mode-alist '("\\.vue\\'" . vue-mode))
+(add-to-list 'auto-mode-alist '("\\.vue\\'" . vue-mode))
 (defun custom-vue-mode-hook ()
   "Hooks for vue mode."
   ;; (when (executable-find "eslint")
   ;;   (flycheck-select-checker 'javascript-eslint))
   ;; (flycheck-mode t)
-  ;; (mmm-clear-overlays)
   (setq mmm-submode-decoration-level 0)
   (setq js-indent-level 2)
   (when (require 'fill-column-indicator nil t)

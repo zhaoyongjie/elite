@@ -10,5 +10,6 @@
 (require 'elite-setup)
 (require 'elite-generic)
 (require 'elite-web)
+(require 'elite-python)
 
 (provide 'elite-init)
