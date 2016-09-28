@@ -11,7 +11,7 @@ Installation & Usage
    cd ~/.emacs.d
    git clone --recursive git@github.com:zhaoyongjie/elite.git
 
-``~/.emacs.d/init.el``, 如果需要加载工作路径, 设置常量 ``workspace-dir``
+~/.emacs.d/init.el, 如果需要加载工作路径, 设置常量workspace-dir
 
 ::
    (defconst workspace-dir "~/workspace")

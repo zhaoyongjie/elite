@@ -17,6 +17,8 @@
                            web-mode
                            json-mode
                            scss-mode
+                           sass-mode
+                           less-css-mode
                            nginx-mode
                            dockerfile-mode
                            markdown-mode

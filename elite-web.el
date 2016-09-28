@@ -25,6 +25,12 @@
   ;; (flycheck-mode t)
   (setq mmm-submode-decoration-level 0)
   (setq js-indent-level 2)
+
+  (setq web-mode-markup-indent-offset 2)
+  (setq web-mode-code-indent-offset 2)
+  (setq web-mode-block-padding 0)
+
+  (setq css-indent-offset 2)
   (when (require 'fill-column-indicator nil t)
     (fci-mode t))
 )

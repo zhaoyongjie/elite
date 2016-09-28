@@ -5,13 +5,14 @@
 
 ;; general things
 (custom-set-variables
- '(inhibit-startup-screen t)
- '(global-linum-mode t)
+ '(inhibit-startup-screen t)   ;不显示启动界面
+ '(global-linum-mode t)        ;全局加上行号
+ '(delete-selection-mode t)    ;C-y的时候, 如果有选择区域, 则先把选择区域删除后yank
  )
 
 (fset 'yes-or-no-p 'y-or-n-p) ;; only type `y` instead of `yes`
 
-(if (boundp 'workspace-dir)
+(if (boundp 'workspace-dir)    ;如果定义了变量workspace-dir, 则设置启动目录
     (setq default-directory workspace-dir))
 
 (setq default-process-coding-system '(utf-8 . utf-8)
@@ -60,8 +61,8 @@
 
 ;;;
 (require 'ido-ubiquitous)
-(ido-everywhere 1)
-(ido-ubiquitous-mode 1)
+(ido-everywhere t)
+(ido-ubiquitous-mode t)
 
 ;;;
 (require 'idle-highlight-mode)
@@ -86,14 +87,14 @@
 (define-key ac-menu-map "\C-p" 'ac-previous)
 
 ;;;
-(require 'yasnippet)
-(yas-global-mode t)
+;; (require 'yasnippet)
+;; (yas-global-mode t)
 
 ;; https://github.com/joaotavora/yasnippet/issues/526
-;; 修正 auto complete和yas tab冲突
-(defadvice ac-fallback-command (around no-yasnippet-fallback activate)
-  (let ((yas-fallback-behavior nil))
-    ad-do-it))
+;; fix auto-complete & yas tab conflict
+;; (defadvice ac-fallback-command (around no-yasnippet-fallback activate)
+;;   (let ((yas-fallback-behavior nil))
+;;     ad-do-it))
 
 ;;;
 (require 'fill-column-indicator)
