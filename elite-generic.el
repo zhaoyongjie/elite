@@ -29,6 +29,11 @@
 
 (delete-selection-mode t)         ;; C-y的时候, 如果有选择区域, 则先把选择区域删除后yank
 
+(setq display-time-string-forms   ;; time-mode
+      '((propertize (concat " " 24-hours ":" minutes " " time-zone)
+ 		    'face 'egoge-display-time)))
+(display-time-mode t)
+
 (setq default-process-coding-system '(utf-8 . utf-8)
       inhibit-startup-screen t    ;; 不显示启动界面
 
@@ -60,7 +65,7 @@
 (global-set-key [home] 'smart-beginning-of-line)
 (global-set-key "\C-a" 'smart-beginning-of-line)
 
-(setq-default show-trailing-whitespace t) ;;显示行尾空格
+;; (setq-default show-trailing-whitespace t) ;;显示行尾空格
 ;; (add-hook 'write-file-hooks 'delete-trailing-whitespace) ;; Remove trailing whitespace
 (setq-default indent-tabs-mode nil)
 
@@ -102,6 +107,7 @@
 ;;;
 (require 'auto-complete)
 (require 'auto-complete-config)
+(global-auto-complete-mode 1)
 (ac-config-default)
 (setq ac-use-menu-map t)
 (define-key ac-menu-map "\C-n" 'ac-next)
@@ -129,6 +135,9 @@
 (setq flycheck-pylintrc "~/.pylintrc")
 
 ;; ====================================
+
+(require 'dedicated)
+
 ;; 暂时的设置
 (add-hook 'org-mode-hook
           (lambda () (setq truncate-lines nil)))

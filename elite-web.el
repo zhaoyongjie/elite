@@ -10,8 +10,7 @@
   (setq web-mode-style-padding 0)
   (setq web-mode-script-padding 0)
   (setq web-mode-block-padding 0)
-  (when (require 'fill-column-indicator nil t)
-    (fci-mode t))
+  (setq web-mode-enable-current-column-highlight t)
 )
 (add-hook 'web-mode-hook 'custom-web-mode-hook)
 
@@ -29,10 +28,9 @@
   (setq web-mode-markup-indent-offset 2)
   (setq web-mode-code-indent-offset 2)
   (setq web-mode-block-padding 0)
+  (setq web-mode-enable-current-column-highlight t)
 
   (setq css-indent-offset 2)
-  (when (require 'fill-column-indicator nil t)
-    (fci-mode t))
 )
 (add-hook 'vue-mode-hook 'custom-vue-mode-hook)
 
@@ -45,8 +43,6 @@
   (flycheck-mode t)
   (when (executable-find "eslint")
     (flycheck-select-checker 'javascript-eslint))
-  (when (require 'fill-column-indicator nil t)
-    (fci-mode t))
 )
 (add-hook 'js2-mode-hook 'custom-js2-mode-hook)
 
