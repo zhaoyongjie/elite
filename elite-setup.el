@@ -34,7 +34,6 @@
 (dolist (relpath '(""
                    "extensions/"
                    "extensions/auto-complete"
-                   "extensions/yasnippet"
                    )
                  )
   (add-to-list 'load-path (concat elite-install-dir relpath)))
