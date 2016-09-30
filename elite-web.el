@@ -40,6 +40,10 @@
 
 (defun custom-js2-mode-hook ()
   (setq js2-basic-offset 2)
+  ;; disable js2 error checker, use flyCheck
+  (setq js2-show-parse-errors nil)
+  (setq js2-strict-missing-semi-warning nil)
+
   (flycheck-mode t)
   (when (executable-find "eslint")
     (flycheck-select-checker 'javascript-eslint))
