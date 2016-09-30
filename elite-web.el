@@ -46,4 +46,7 @@
 )
 (add-hook 'js2-mode-hook 'custom-js2-mode-hook)
 
+;; https://github.com/abicky/nodejs-repl.el
+(require 'nodejs-repl)
+
 (provide 'elite-web)

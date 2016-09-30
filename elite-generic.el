@@ -30,8 +30,7 @@
 (delete-selection-mode t)         ;; C-y的时候, 如果有选择区域, 则先把选择区域删除后yank
 
 (setq display-time-string-forms   ;; time-mode
-      '((propertize (concat " " 24-hours ":" minutes " " time-zone)
- 		    'face 'egoge-display-time)))
+      '((propertize (concat " " 24-hours ":" minutes " " time-zone))))
 (display-time-mode t)
 
 (setq default-process-coding-system '(utf-8 . utf-8)
@@ -107,7 +106,6 @@
 ;;;
 (require 'auto-complete)
 (require 'auto-complete-config)
-(global-auto-complete-mode 1)
 (ac-config-default)
 (setq ac-use-menu-map t)
 (define-key ac-menu-map "\C-n" 'ac-next)

@@ -1,3 +1,7 @@
+(global-set-key (kbd "C-=") 'text-scale-increase)
+(global-set-key (kbd "C--") 'text-scale-decrease)
+(global-set-key (kbd "C-0") 'text-scale-adjust)
+
 (global-set-key (kbd "<C-M-right>") 'windmove-right)
 (global-set-key (kbd "<C-M-left>") 'windmove-left)
 (global-set-key (kbd "<C-M-down>") 'windmove-down)
