@@ -133,6 +133,9 @@ names to which it refers are bound."
      (font-lock-variable-name-face ((,class (:foreground ,orange))))
      (font-lock-warning-face ((,class (:weight bold :foreground ,red))))
 
+     ;; Eshell
+     (eshell-prompt ((,class (:foreground ,foreground))))
+     
      ;; Flymake
      (flymake-warnline ((,class (:underline ,orange :background ,background))))
      (flymake-errline ((,class (:underline ,red :background ,background))))

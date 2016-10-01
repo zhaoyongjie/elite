@@ -1,6 +1,6 @@
 ;; Common User Access (CUA) binding C-x, C-v, C-c, C-z:
 ;; https://www.gnu.org/software/emacs/manual/html_node/emacs/CUA-Bindings.html#CUA-Bindings
-(cua-mode t)
+;; (cua-mode t)
 
 ;; calc-mode more comfortable
 (global-set-key (kbd "M-c") 'calc-dispatch)
