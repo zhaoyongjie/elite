@@ -2,9 +2,6 @@
 ;; https://www.gnu.org/software/emacs/manual/html_node/emacs/CUA-Bindings.html#CUA-Bindings
 ;; (cua-mode t)
 
-;; calc-mode more comfortable
-(global-set-key (kbd "M-c") 'calc-dispatch)
-
 (global-set-key (kbd "C-=") 'text-scale-increase)
 (global-set-key (kbd "C--") 'text-scale-decrease)
 (global-set-key (kbd "C-0") 'text-scale-adjust)
@@ -31,7 +28,7 @@
          (beginning-of-line))))
 (global-set-key "\C-a" 'smart-beginning-of-line)
 
-;; calc-mode
+;; calc-mode more comfortable
 (global-set-key (kbd "M-c") 'calc-dispatch)
 
 (provide 'elite-binding)

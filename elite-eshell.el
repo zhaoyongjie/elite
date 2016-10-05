@@ -13,7 +13,7 @@
                   (eshell-flatten-list (reverse args))))))
 
 (defun custom-eshell-mode-hook ()
-  (if (file-exists-p "~/.shells/.bashrc") nil)
+  (if (file-exists-p 'bashrc) nil)
   (setq eshell-aliases-file "eshell.alias")
   (setq eshell-history-size 1024)
   ;; http://stackoverflow.com/questions/19831228/make-eshell-tab-completion-behaves-like-bash
