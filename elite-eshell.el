@@ -13,7 +13,6 @@
                   (eshell-flatten-list (reverse args))))))
 
 (defun custom-eshell-mode-hook ()
-  (if (file-exists-p 'bashrc) nil)
   (setq eshell-aliases-file "eshell.alias")
   (setq eshell-history-size 1024)
   ;; http://stackoverflow.com/questions/19831228/make-eshell-tab-completion-behaves-like-bash
@@ -33,7 +32,7 @@
 (add-to-list 'ac-modes 'eshell-mode)
 (setq ac-sources '(ac-source-eshell-pcomplete
                    ac-source-files-in-current-dir
-                   ;; ac-source-filename
+                   ac-source-filename
                    ;; ac-source-abbrev
                    ;; ac-source-words-in-buffer
                    ;; ac-source-imenu

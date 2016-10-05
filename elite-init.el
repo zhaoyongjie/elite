@@ -13,8 +13,10 @@
 (require 'elite-setup)
 (require 'elite-generic)
 (require 'elite-binding)
+
 (require 'elite-web)
 (require 'elite-python)
 (require 'elite-eshell)
+(require 'elite-org)
 
 (provide 'elite-init)

@@ -124,11 +124,4 @@
 
 (require 'dedicated)
 
-;; 暂时的设置
-(add-hook 'org-mode-hook
-          (lambda () (setq truncate-lines nil)))
-
-(eval-after-load "sql"
-  '(load-library "sql-indent"))
-
 (provide 'elite-generic)
