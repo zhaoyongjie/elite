@@ -109,19 +109,6 @@
 ;;   (let ((yas-fallback-behavior nil))
 ;;     ad-do-it))
 
-;; ====================================
-;; install by packages archives
-(global-flycheck-mode)
-(setq-default flycheck-temp-prefix ".")
-(setq flycheck-disable-checker '(javascript-jshint))
-(setq flycheck-checkers '(javascript-eslint
-                          python-pylint
-                          json-jsonlint))
-(setq flycheck-eslintrc "~/.eslintrc")
-(setq flycheck-pylintrc "~/.pylintrc")
-
-;; ====================================
-
 (require 'dedicated)
 
 (require 'undo-tree)

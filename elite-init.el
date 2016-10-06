@@ -11,6 +11,7 @@
 ;; (byte-recompile-directory (expand-file-name elite-install-dir) 0)
 
 (require 'elite-setup)
+(require 'elite-defuns)
 (require 'elite-generic)
 (require 'elite-binding)
 

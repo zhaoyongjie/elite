@@ -17,6 +17,7 @@
 ;; python
 (defun custom-python-mode-hook ()
   (flycheck-mode t)
+  (setq flycheck-pylintrc "~/.pylintrc")
   (flycheck-select-checker 'python-flake8)
   (fci-mode t)
   )

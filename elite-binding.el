@@ -13,22 +13,20 @@
 (global-set-key (kbd "M-o") 'other-window)
 
 ;; join next line
-(global-set-key (kbd "M-j") (lambda ()
-                              (interactive)
-                              (join-line -1)))
+(global-set-key (kbd "M-j") 'join-next-line)
 
-;; Move point to first non-whitespace character or beginning-of-line.
-;; Move point to the first non-whitespace character on this line.
-;; If point was already at that position, move point to beginning of line.
-(defun smart-beginning-of-line ()
-  (interactive)
-  (let ((oldpos (point)))
-    (back-to-indentation)
-    (and (= oldpos (point))
-         (beginning-of-line))))
-(global-set-key "\C-a" 'smart-beginning-of-line)
+(global-set-key (kbd "C-a") 'smart-beginning-of-line)
+
+;; Duplicate region
+(global-set-key (kbd "C-c d") 'duplicate-current-line-or-region)
+
+;; Killing text
+(global-set-key (kbd "C-w") 'kill-region-or-current-line)
+
+;; Use M-w for save-line or save-region
+(global-set-key (kbd "M-w") 'save-region-or-current-line)
 
 ;; calc-mode more comfortable
-(global-set-key (kbd "M-c") 'calc-dispatch)
+(global-set-key (kbd "M-c") 'quick-calc)
 
 (provide 'elite-binding)

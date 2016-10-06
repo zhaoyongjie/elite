@@ -46,7 +46,8 @@
 
   (flycheck-mode t)
   (when (executable-find "eslint")
-    (flycheck-select-checker 'javascript-eslint))
+    (flycheck-select-checker 'javascript-eslint)
+    (setq flycheck-eslintrc "~/.eslintrc"))
 )
 (add-hook 'js2-mode-hook 'custom-js2-mode-hook)
 
