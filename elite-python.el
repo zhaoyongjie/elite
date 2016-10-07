@@ -20,6 +20,7 @@
   (setq flycheck-pylintrc "~/.pylintrc")
   (flycheck-select-checker 'python-flake8)
   (fci-mode t)
+  (hs-minor-mode t)
   )
 (add-hook 'python-mode-hook 'custom-python-mode-hook)
 

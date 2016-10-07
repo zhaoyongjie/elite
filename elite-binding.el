@@ -26,6 +26,9 @@
 ;; Use M-w for save-line or save-region
 (global-set-key (kbd "M-w") 'save-region-or-current-line)
 
+;; Jump to a definition in the current file. (This is awesome)
+(global-set-key (kbd "C-x C-i") 'ido-imenu)
+
 ;; calc-mode more comfortable
 (global-set-key (kbd "M-c") 'quick-calc)
 
