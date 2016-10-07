@@ -16,6 +16,7 @@
 
 ;; setting vue-mode, vue-mode is mmm-mode's fork
 ;; https://github.com/CodeFalling/vue-mode
+(require 'vue-mode)
 (add-to-list 'auto-mode-alist '("\\.vue\\'" . vue-mode))
 (defun custom-vue-mode-hook ()
   "Hooks for vue mode."

@@ -1,9 +1,9 @@
 ;; 
 (require 'package)
 (add-to-list 'package-archives
-             '("marmalade" . "http://marmalade-repo.org/packages/") t)
+             '("melpa-stable" . "http://stable.melpa.org/packages/") t)
 (add-to-list 'package-archives
-             '("melpa" . "http://melpa.org/packages/") t)
+             '("marmalade" . "http://marmalade-repo.org/packages/") t)
 (add-to-list 'package-archives 
              '("org" . "http://orgmode.org/elpa/") t)
 (add-to-list 'package-archives
@@ -19,11 +19,12 @@
                            scss-mode
                            sass-mode
                            less-css-mode
+                           mmm-mode
                            nginx-mode
                            dockerfile-mode
                            markdown-mode
                            flycheck
-                           vue-mode
+                           magit
                            )
   "A list of packages to ensure are installed at launch.")
 (dolist (p install-packages)
