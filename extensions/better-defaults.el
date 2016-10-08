@@ -86,7 +86,9 @@
         ediff-window-setup-function 'ediff-setup-windows-plain
         save-place-file (concat user-emacs-directory "places")
         backup-directory-alist `(("." . ,(concat user-emacs-directory
-                                                 "backups")))))
+                                                 "backups")))
+        auto-save-file-name-transforms  `((".*" ,(concat user-emacs-directory
+                                                 "backups/") t))))
 
 (provide 'better-defaults)
 ;;; better-defaults.el ends here
