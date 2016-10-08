@@ -19,6 +19,7 @@
   ;; Make eshell tab completion behaves like Bash
   (setq pcomplete-cycle-completions nil)
   (linum-mode -1)
+  (setq show-trailing-whitespace nil)
   )
 
 (add-hook 'eshell-mode-hook 'custom-eshell-mode-hook)

@@ -52,7 +52,7 @@
 
 (setq-default truncate-lines 1)   ;; no wordwrap
 
-;; (setq-default show-trailing-whitespace t) ;;显示行尾空格
+(setq-default show-trailing-whitespace t) ;;显示行尾空格
 ;; (add-hook 'write-file-hooks 'delete-trailing-whitespace) ;; Remove trailing whitespace
 (setq-default indent-tabs-mode nil)
 
