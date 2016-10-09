@@ -151,4 +151,32 @@ Symbols matching the text at point are put first in the completion list."
       (push-mark (point))
       (goto-char position))))
 
+(defun align-to-whitespace ()
+  "Align columns by whitespace, and indent-region"
+  (interactive)
+  (align-regexp (region-beginning) (region-end)
+                "\\(\\s-*\\)\\s-" 1 0 t)
+  (indent-region (region-beginning) (region-end))
+  (goto-char (region-beginning)))
+
+(defun align-to-colon (begin end)
+  (interactive "r")
+  (align-regexp begin end
+                (rx (group (zero-or-more (syntax whitespace))) ":") 1 1 ))
+
+(defun align-to-equals (begin end)
+  (interactive "r")
+  (align-regexp begin end
+                (rx (group (zero-or-more (syntax whitespace))) "=") 1 1 ))
+
+(defun align-to-comma (begin end)
+  (interactive "r")
+  (align-regexp begin end
+                (rx "," (group (zero-or-more (syntax whitespace))) ) 1 1 ))
+
+(defun align-to-comma-before (begin end)
+  (interactive "r")
+  (align-regexp begin end
+                (rx (group (zero-or-more (syntax whitespace))) ",") 1 1 ))
+
 (provide 'elite-defuns)
