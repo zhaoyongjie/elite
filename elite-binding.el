@@ -32,4 +32,11 @@
 ;; calc-mode more comfortable
 (global-set-key (kbd "M-c") 'quick-calc)
 
+;; Like isearch, but adds region (if any) to history and deactivates mark
+(global-set-key (kbd "C-s") 'isearch-forward-use-region)
+(global-set-key (kbd "C-r") 'isearch-backward-use-region)
+
+(global-set-key (kbd "M-s") 'highlight-regexp)
+(global-set-key (kbd "M-S") 'unhighlight-regexp)
+
 (provide 'elite-binding)

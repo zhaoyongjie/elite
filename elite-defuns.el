@@ -179,4 +179,22 @@ Symbols matching the text at point are put first in the completion list."
   (align-regexp begin end
                 (rx (group (zero-or-more (syntax whitespace))) ",") 1 1 ))
 
+(defun region-as-string ()
+  (buffer-substring (region-beginning)
+                    (region-end)))
+
+(defun isearch-forward-use-region ()
+  (interactive)
+  (when (region-active-p)
+    (add-to-history 'search-ring (region-as-string))
+    (deactivate-mark))
+  (call-interactively 'isearch-forward))
+
+(defun isearch-backward-use-region ()
+  (interactive)
+  (when (region-active-p)
+    (add-to-history 'search-ring (region-as-string))
+    (deactivate-mark))
+  (call-interactively 'isearch-backward))
+
 (provide 'elite-defuns)
