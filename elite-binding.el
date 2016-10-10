@@ -10,7 +10,7 @@
 (global-set-key (kbd "<C-M-left>") 'windmove-left)
 (global-set-key (kbd "<C-M-down>") 'windmove-down)
 (global-set-key (kbd "<C-M-up>") 'windmove-up)
-(global-set-key (kbd "M-o") 'other-window)
+(global-set-key (kbd "M-o") 'swap-buffer)
 
 ;; join next line
 (global-set-key (kbd "M-j") 'join-next-line)
@@ -36,7 +36,7 @@
 (global-set-key (kbd "C-s") 'isearch-forward-use-region)
 (global-set-key (kbd "C-r") 'isearch-backward-use-region)
 
-(global-set-key (kbd "M-s") 'highlight-regexp)
+(global-set-key (kbd "M-s") 'highlight-regexp-use-region)
 (global-set-key (kbd "M-S") 'unhighlight-regexp)
 
 (provide 'elite-binding)
