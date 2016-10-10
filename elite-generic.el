@@ -114,6 +114,6 @@
 (require 'undo-tree)
 (global-undo-tree-mode)
 
-(require 'buffer-move)
+(require 'transpose-frame)
 
 (provide 'elite-generic)

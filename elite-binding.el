@@ -10,7 +10,8 @@
 (global-set-key (kbd "<C-M-left>") 'windmove-left)
 (global-set-key (kbd "<C-M-down>") 'windmove-down)
 (global-set-key (kbd "<C-M-up>") 'windmove-up)
-(global-set-key (kbd "M-o") 'swap-buffer)
+(global-set-key (kbd "M-o") 'rotate-frame-clockwise)
+(global-set-key (kbd "M-O") 'rotate-frame-anticlockwise)
 
 ;; join next line
 (global-set-key (kbd "M-j") 'join-next-line)
