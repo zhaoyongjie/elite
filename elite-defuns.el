@@ -202,15 +202,4 @@ Symbols matching the text at point are put first in the completion list."
   (when (region-active-p)
     (highlight-regexp (region-as-string))))
 
-(defun swap-buffer ()
-  "switch current buffer with other window buffer 
-   right-2-left and up-2-down"
-  (interactive)
-  (cond
-   ((windmove-find-other-window 'right) (buf-move-right))
-   ((windmove-find-other-window 'left) (buf-move-left))
-   ((windmove-find-other-window 'up) (buf-move-up))
-   ((windmove-find-other-window 'down) (buf-move-down)))
-  (message "swap buffer done"))
-
 (provide 'elite-defuns)
