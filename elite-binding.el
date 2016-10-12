@@ -20,6 +20,7 @@
 
 ;; Duplicate region
 (global-set-key (kbd "C-c d") 'duplicate-current-line-or-region)
+(global-set-key (kbd "C-c w") 'copy-word)
 
 ;; Killing text
 (global-set-key (kbd "C-w") 'kill-region-or-current-line)
@@ -28,7 +29,7 @@
 (global-set-key (kbd "M-w") 'save-region-or-current-line)
 
 ;; Jump to a definition in the current file. (This is awesome)
-(global-set-key (kbd "C-x C-i") 'ido-imenu)
+(global-set-key (kbd "C-c C-i") 'ido-imenu)
 
 ;; calc-mode more comfortable
 (global-set-key (kbd "M-c") 'quick-calc)
@@ -39,5 +40,12 @@
 
 (global-set-key (kbd "M-s") 'highlight-regexp-use-region)
 (global-set-key (kbd "M-S") 'unhighlight-regexp)
+
+(global-set-key (kbd "C-M-p") 'bookmark-set)
+(global-set-key (kbd "C-M-j") 'bookmark-jump)
+
+;; magit series
+(global-set-key (kbd "C-M-m") 'magit-status)
+(global-set-key (kbd "C-M-l") 'magit-log-all)
 
 (provide 'elite-binding)

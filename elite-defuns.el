@@ -107,6 +107,24 @@ If there's no region, the current line will be duplicated."
       (kill-ring-save (region-beginning) (region-end))
     (copy-line 1)))
 
+(defun get-point (symbol &optional arg)
+  "get the point"
+  (funcall symbol arg)
+  (point))
+
+(defun copy-thing (begin-of-thing end-of-thing &optional arg)
+  "copy thing between beg & end into kill ring"
+  (save-excursion
+    (let ((beg (get-point begin-of-thing 1))
+          (end (get-point end-of-thing arg)))
+      (copy-region-as-kill beg end))))
+
+(defun copy-word (arg)
+  "Copy words at point into kill-ring"
+  (interactive "p")
+  (copy-thing 'backward-word 'forward-word arg)
+  (message "1 word copied"))
+
 (require 'imenu)
 (defun ido-imenu ()
   "Update the imenu index and then use ido to select a symbol to navigate to.
