@@ -29,9 +29,9 @@
 
 (delete-selection-mode t)         ;; C-y的时候, 如果有选择区域, 则先把选择区域删除后yank
 
-(setq display-time-string-forms   ;; time-mode
-      '((propertize (concat " " 24-hours ":" minutes " " time-zone))))
-(display-time-mode t)
+;; (setq display-time-string-forms   ;; time-mode
+;;       '((propertize (concat " " 24-hours ":" minutes " " time-zone))))
+;; (display-time-mode t)
 
 (setq default-process-coding-system '(utf-8 . utf-8)
       inhibit-startup-screen t    ;; 不显示启动界面
@@ -115,5 +115,7 @@
 (global-undo-tree-mode)
 
 (require 'transpose-frame)
+
+(magit-auto-revert-mode -1)
 
 (provide 'elite-generic)
