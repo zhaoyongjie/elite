@@ -11,10 +11,7 @@
 (color-theme-tomorrow--define-theme night)
 
 ;; set font family
-(set-frame-font "Monaco 13")
-;; 如果是GUI版本, 则设置中文字体, 如果不做判断terminal中的emacs会报错
-(if window-system
-    (set-fontset-font "fontset-default" 'han '("STHeiti")))
+(require 'elite-font)
 
 ;; ====================================================================
 ;; general things

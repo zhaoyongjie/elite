@@ -2,8 +2,8 @@
 ;; https://www.gnu.org/software/emacs/manual/html_node/emacs/CUA-Bindings.html#CUA-Bindings
 ;; (cua-mode t)
 
-(global-set-key (kbd "C-=") 'text-scale-increase)
-(global-set-key (kbd "C--") 'text-scale-decrease)
+(global-set-key (kbd "C-=") 'increase-emacs-font-size)
+(global-set-key (kbd "C--") 'decrease-emacs-font-size)
 (global-set-key (kbd "C-0") 'text-scale-adjust)
 
 (global-set-key (kbd "<C-M-right>") 'windmove-right)

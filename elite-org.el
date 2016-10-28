@@ -1,5 +1,5 @@
 (defun custom-org-mode-hook ()
-  (setq truncate-lines nil)
+  (setq org-src-fontify-natively t)
   )
 (add-hook 'org-mode-hook 'custom-org-mode-hook)
 
