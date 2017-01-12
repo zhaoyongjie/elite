@@ -25,7 +25,7 @@
   (setq js2-show-parse-errors nil)
   (setq js2-strict-missing-semi-warning nil)
 
-  (flycheck-mode t)
+  (flycheck-mode -1)
   (when (executable-find "eslint")
     (flycheck-select-checker 'javascript-eslint)
     (setq flycheck-eslintrc "~/.eslintrc"))

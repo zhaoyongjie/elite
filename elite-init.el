@@ -18,7 +18,7 @@
 (require 'elite-web)
 (require 'elite-python)
 (require 'elite-eshell)
-;; (require 'elite-shell)
+(require 'elite-shell)
 (require 'elite-org)
 
 (provide 'elite-init)
