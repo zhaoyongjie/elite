@@ -48,4 +48,7 @@
 (global-set-key (kbd "C-c s") 'magit-status)
 (global-set-key (kbd "C-c l") 'magit-log-all)
 
+;; hs-minor-mode
+(global-set-key (kbd "C-c f") 'hs-toggle-hiding)
+
 (provide 'elite-binding)

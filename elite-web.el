@@ -12,6 +12,7 @@
   (setq web-mode-script-padding 0)
   (setq web-mode-block-padding 0)
   (setq web-mode-enable-current-column-highlight t)
+  (hs-minor-mode t)
 )
 (add-hook 'web-mode-hook 'custom-web-mode-hook)
 
@@ -24,6 +25,8 @@
   ;; disable js2 error checker, use flyCheck
   (setq js2-show-parse-errors nil)
   (setq js2-strict-missing-semi-warning nil)
+
+  (hs-minor-mode t)
 
   (flycheck-mode -1)
   (when (executable-find "eslint")
