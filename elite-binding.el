@@ -51,4 +51,7 @@
 ;; hs-minor-mode
 (global-set-key (kbd "C-c f") 'hs-toggle-hiding)
 
+(global-set-key (kbd "M-d") 'delete-word)
+(global-set-key (kbd "<M-backspace>") 'backward-delete-word)
+
 (provide 'elite-binding)
