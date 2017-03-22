@@ -4,6 +4,12 @@
 (add-to-list 'auto-mode-alist '("\\.scss\\'" . css-mode))
 (add-to-list 'auto-mode-alist '("\\.vue\\'" . web-mode))
 
+(defun custom-css-mode-hook()
+  (setq css-indent-offset 2)
+  (setq css-tab-mode nil)
+)
+(add-hook 'css-mode-hook 'custom-css-mode-hook)
+
 (defun custom-web-mode-hook ()
   "Hooks for Web mode."
   (setq web-mode-markup-indent-offset 2)

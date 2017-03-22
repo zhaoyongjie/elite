@@ -146,3 +146,7 @@ watch
 while
 window
 with
+
+async
+await
+console.log
