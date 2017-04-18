@@ -115,3 +115,5 @@
 (magit-auto-revert-mode -1)
 
 (provide 'elite-generic)
+
+(require 'go-mode-autoloads)
