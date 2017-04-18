@@ -198,3 +198,4 @@ instanceof
 
 async
 await
+console.log
