@@ -48,6 +48,7 @@
       )
 
 (setq-default truncate-lines 1)   ;; no wordwrap
+(setq-default tab-width 4)        ;; tab宽度为4
 (setq-default show-trailing-whitespace t) ;;显示行尾空格
 ;; (add-hook 'write-file-hooks 'delete-trailing-whitespace) ;; Remove trailing whitespace
 (setq-default indent-tabs-mode nil)
