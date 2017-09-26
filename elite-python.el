@@ -17,10 +17,11 @@
 ;; python
 (defun custom-python-mode-hook ()
   (flycheck-mode -1)
-  (setq flycheck-pylintrc "~/.pylintrc")
-  (flycheck-select-checker 'python-flake8)
+  ;; (setq flycheck-pylintrc "~/.pylintrc")
+  ;; (flycheck-select-checker 'python-flake8)
   ;; (fci-mode t)
-  (hs-minor-mode t))
+  (hs-minor-mode t)
+  (elpy-enable))
 (add-hook 'python-mode-hook 'custom-python-mode-hook)
 
 (provide 'elite-python)
