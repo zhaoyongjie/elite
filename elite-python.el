@@ -21,7 +21,12 @@
   ;; (flycheck-select-checker 'python-flake8)
   ;; (fci-mode t)
   (hs-minor-mode t)
-  (elpy-enable))
+  (elpy-enable)
+  (setq elpy-rpc-backend "jedi")
+  (define-key company-active-map (kbd "C-n") 'company-select-next)
+  (define-key company-active-map (kbd "C-p") 'company-select-previous)
+  (define-key elpy-mode-map (kbd "C-.") 'elpy-goto-definition)
+  (define-key elpy-mode-map (kbd "C-c C-.") 'elpy-goto-definition-other-window))
 (add-hook 'python-mode-hook 'custom-python-mode-hook)
 
 (provide 'elite-python)
