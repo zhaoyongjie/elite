@@ -19,25 +19,12 @@
   ;; http://stackoverflow.com/questions/19831228/make-eshell-tab-completion-behaves-like-bash
   ;; Make eshell tab completion behaves like Bash
   (setq pcomplete-cycle-completions nil)
-  (linum-mode -1)
+  (linum-mode nil)
+  (auto-complete-mode nil)
   (setq show-trailing-whitespace nil)
+  ;; (setq eshell-prompt-function (lambda () (concat venv-current-name " $ ")))
   )
 
 (add-hook 'eshell-mode-hook 'custom-eshell-mode-hook)
-
-;; ac for eshell
-(defvar ac-source-eshell-pcomplete
-  '((candidates . (pcomplete-completions))))
-(defun ac-complete-eshell-pcomplete ()
-  (interactive)
-  (auto-complete '(ac-source-eshell-pcomplete)))
-(add-to-list 'ac-modes 'eshell-mode)
-(setq ac-sources '(ac-source-eshell-pcomplete
-                   ac-source-files-in-current-dir
-                   ac-source-filename
-                   ;; ac-source-abbrev
-                   ;; ac-source-words-in-buffer
-                   ;; ac-source-imenu
-                   ))
 
 (provide 'elite-eshell)

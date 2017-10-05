@@ -3,6 +3,7 @@
 (add-to-list 'auto-mode-alist '("\\.css\\'" . css-mode))
 (add-to-list 'auto-mode-alist '("\\.scss\\'" . css-mode))
 (add-to-list 'auto-mode-alist '("\\.vue\\'" . web-mode))
+(add-to-list 'auto-mode-alist '("\\.jsx\\'" . web-mode))
 
 (defun custom-css-mode-hook()
   (setq css-indent-offset 2)
@@ -25,7 +26,6 @@
 
 ;; setting js2-mode
 (add-to-list 'auto-mode-alist '("\\.js\\'" . js2-mode))
-(add-to-list 'auto-mode-alist '("\\.jsx\\'" . js2-jsx-mode))
 
 (defun custom-js2-mode-hook ()
   (setq js2-basic-offset 2)

@@ -23,6 +23,7 @@
   (hs-minor-mode t)
   (elpy-enable)
   (setq elpy-rpc-backend "jedi")
+  (setq elpy-modules (delq 'elpy-module-flymake elpy-modules))
   (define-key company-active-map (kbd "C-n") 'company-select-next)
   (define-key company-active-map (kbd "C-p") 'company-select-previous)
   (define-key elpy-mode-map (kbd "C-.") 'elpy-goto-definition)

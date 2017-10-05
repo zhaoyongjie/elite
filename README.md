@@ -1,5 +1,5 @@
 ## Usage
-自己用的emacs设置, 按照emacs for python的配置做了一些改写.
+emacs configurtion by myself
 
 ```bash
    cd ~/.emacs.d
@@ -10,5 +10,8 @@
 ## edit init.el
 ```lisp
    (defconst workspace-dir "~/workspace")
+   (defconst kb-dir "~/workspace/board/diary/kb")
+   (defconst publish-dir "~/workspace/www")
+
    (load-file "~/.emacs.d/elite/elite-init.el")
 ```

@@ -29,7 +29,7 @@
                            flycheck
                            magit
                            elpy
-                           )
+                           virtualenvwrapper)
   "A list of packages to ensure are installed at launch.")
 (dolist (p install-packages)
   (when (not (package-installed-p p))
