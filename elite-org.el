@@ -13,6 +13,7 @@
            :publishing-function org-html-publish-to-html
            :section-numbers nil
            :auto-sitemap t
+           :auto-preamble t
            :headline-levels 4
            :sitemap-filename "index.org"
            :sitemap-title "Knowledge Base"
@@ -28,6 +29,12 @@
            :base-directory ,(concat org-project-dir "/images")
            :base-extension "png\\|jpg\\|gif"
            :publishing-directory ,(concat org-publish-dir "/images")
+           :publishing-function org-publish-attachment
+           :recursive t)
+          ("docs"
+           :base-directory ,(concat org-project-dir "/docs")
+           :base-extension "pdf"
+           :publishing-directory ,(concat org-publish-dir "/docs")
            :publishing-function org-publish-attachment
            :recursive t)
           )))
