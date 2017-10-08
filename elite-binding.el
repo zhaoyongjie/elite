@@ -19,7 +19,8 @@
 (global-set-key (kbd "C-a") 'smart-beginning-of-line)
 
 ;; Duplicate region
-(global-set-key (kbd "C-c d") 'duplicate-current-line-or-region)
+;; "C-c d" used by search bing dictionary
+;; (global-set-key (kbd "C-c d") 'duplicate-current-line-or-region)
 (global-set-key (kbd "C-c w") 'copy-word)
 
 ;; Killing text

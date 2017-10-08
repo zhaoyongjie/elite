@@ -116,6 +116,9 @@
 
 (magit-auto-revert-mode -1)
 
-(provide 'elite-generic)
-
 (require 'go-mode-autoloads)
+
+(require 'bing-dict)
+(global-set-key (kbd "C-c d") 'bing-dict-brief)
+
+(provide 'elite-generic)
