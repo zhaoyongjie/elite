@@ -151,7 +151,7 @@ Symbols matching the text at point are put first in the completion list."
   (imenu--make-index-alist)
   (let ((name-and-pos '())
         (symbol-names '()))
-    (flet ((addsymbols (symbol-list)
+    (cl-flet ((addsymbols (symbol-list)
                        (when (listp symbol-list)
                          (dolist (symbol symbol-list)
                            (let ((name nil) (position nil))
@@ -237,5 +237,23 @@ Symbols matching the text at point are put first in the completion list."
   (interactive)
   (when (region-active-p)
     (highlight-regexp (region-as-string))))
+
+(defun toggle-var (var)
+  (interactive
+   (let* ((def  (variable-at-point))
+          (def  (and def
+                     (not (numberp def))
+                     (memq (symbol-value def) '(nil t))
+                     (symbol-name def))))
+     (list
+      (completing-read
+       "Toggle value of variable: "
+       obarray (lambda (c)
+                 (unless (symbolp c) (setq c  (intern c)))
+                 (and (boundp c)  (memq (symbol-value c) '(nil t))))
+       'must-confirm nil 'variable-name-history def))))
+  (let ((sym  (intern var)))
+    (set sym (not (symbol-value sym)))
+    (message "`%s' is now `%s'" var (symbol-value sym))))
 
 (provide 'elite-defuns)

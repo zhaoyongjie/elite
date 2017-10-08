@@ -120,5 +120,7 @@
 
 (require 'bing-dict)
 (global-set-key (kbd "C-c d") 'bing-dict-brief)
+(setq bing-dict-save-search-result nil)
+(setq bing-dict-org-file (concat workspace-dir "/board/diary/en/vocabulary.org"))
 
 (provide 'elite-generic)
