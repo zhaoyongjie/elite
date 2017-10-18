@@ -92,8 +92,9 @@
 (require 'auto-complete)
 (require 'auto-complete-config)
 (ac-config-default)
-(setq ac-use-menu-map t)
-(setq ac-modes (delq 'python-mode ac-modes))
+(setq
+ ac-use-menu-map t
+ ac-modes (delq 'python-mode ac-modes))
 (define-key ac-menu-map "\C-n" 'ac-next)
 (define-key ac-menu-map "\C-p" 'ac-previous)
 
@@ -120,7 +121,8 @@
 
 (require 'bing-dict)
 (global-set-key (kbd "C-c d") 'bing-dict-brief)
-(setq bing-dict-save-search-result nil)
-(setq bing-dict-org-file (concat workspace-dir "/board/diary/en/vocabulary.org"))
+(setq
+ bing-dict-save-search-result nil
+ bing-dict-org-file (concat workspace-dir "/board/diary/en/vocabulary.org"))
 
 (provide 'elite-generic)
